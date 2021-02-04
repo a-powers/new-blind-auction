@@ -9,9 +9,10 @@ winner = ""
 def bid_winner(new_bids = bid_dict):
     highest_bid = 0
     for bidder in new_bids:
-        winner = new_bids[bidder]
-        if current_bid > highest_bid:
-            highest_bid = current_bid
+        bid_amount = new_bids[bidder]
+        if bid_amount > highest_bid:
+            highest_bid = bid_amount
+            winner = bidder
     print(f"The winner is {winner} with a bid of {highest_bid}.")
 
 
